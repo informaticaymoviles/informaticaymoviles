@@ -1,6 +1,6 @@
 /*
  * informaticaymoviles.com - Buscador de presupuestos de hardware y móviles.
- * Copyright (C) 2026  [Tu Nombre o Nombre del Proyecto]
+ * Copyright (C) 2026 informaticaymoviles.com
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
