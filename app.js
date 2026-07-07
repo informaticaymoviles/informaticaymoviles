@@ -1,100 +1,9 @@
 /*
- * informaticaymoviles.com - v6.0 (Algoritmo de Aproximación Avanzada y Ratio AnTuTu)
+ * informaticaymoviles.com - v7.0 (PassMark Core Global Engine Integration)
  * Licencia: GNU GPLv3
  */
 
-const fallbackDatabase = {
-    pc: [
-        {
-            precio_base: 440.00,
-            cpuBrand: "amd",
-            purpose: "office",
-            gpuBrand: "indiferente",
-            title: "PC Fijo Ofimática Avanzada AMD Ryzen (Gráficos Integrados)",
-            parts: [
-                { name: "CPU: AMD Ryzen 5 5600G (Gráficos Vega)", price: 119.90, store: "PcComponentes", url: "https://www.pccomponentes.com/" },
-                { name: "Placa Base: Gigabyte B450M DS3H", price: 74.95, store: "Amazon ES", url: "https://www.amazon.es/" },
-                { name: "RAM: 16GB DDR4 3200MHz Corsair", price: 45.00, store: "Coolmod", url: "https://www.coolmod.com/" },
-                { name: "SSD: 1TB NVMe M.2 Kingston", price: 62.00, store: "Neobyte", url: "https://www.neobyte.es/" },
-                { name: "Fuente + Caja: MicroATX 500W", price: 58.00, store: "Amazon ES", url: "https://www.amazon.es/" }
-            ]
-        },
-        {
-            precio_base: 412.00,
-            cpuBrand: "intel",
-            purpose: "office",
-            gpuBrand: "indiferente",
-            title: "PC Fijo Multimedia Intel Core Essential (Gráficos Integrados)",
-            parts: [
-                { name: "CPU: Intel Core i3-12100 con Intel UHD", price: 105.00, store: "PcComponentes", url: "https://www.pccomponentes.com/" },
-                { name: "Placa Base: ASUS Prime H610M", price: 82.00, store: "Neobyte", url: "https://www.neobyte.es/" },
-                { name: "RAM: 16GB DDR4 3200MHz Crucial", price: 41.50, store: "Amazon ES", url: "https://www.amazon.es/" },
-                { name: "SSD: 500GB NVMe M.2 Western Digital", price: 46.00, store: "Coolmod", url: "https://www.coolmod.com/" },
-                { name: "Fuente + Caja: ATX Estándar 500W", price: 55.00, store: "Amazon ES", url: "https://www.amazon.es/" }
-            ]
-        },
-        {
-            precio_base: 818.00,
-            cpuBrand: "amd",
-            purpose: "gaming",
-            gpuBrand: "amd",
-            title: "PC Fijo Gaming Calidad/Precio AMD Ryzen + Radeon RX",
-            parts: [
-                { name: "CPU: AMD Ryzen 5 5600X", price: 135.00, store: "Coolmod", url: "https://www.coolmod.com/" },
-                { name: "GPU: AMD Radeon RX 6650 XT 8GB", price: 259.99, store: "PcComponentes", url: "https://www.pccomponentes.com/" },
-                { name: "Placa Base: MSI B550M PRO-VDH", price: 95.00, store: "Amazon ES", url: "https://www.amazon.es/" },
-                { name: "RAM: 16GB DDR4 3600MHz Kingston", price: 48.00, store: "Neobyte", url: "https://www.neobyte.es/" },
-                { name: "SSD: 1TB NVMe Crucial PCIe 4.0", price: 69.90, store: "PcComponentes", url: "https://www.pccomponentes.com/" },
-                { name: "Fuente: Corsair CX650 80+ Bronze", price: 74.50, store: "Amazon ES", url: "https://www.amazon.es/" },
-                { name: "Torre: MSI Forge RGB", price: 62.00, store: "Coolmod", url: "https://www.coolmod.com/" }
-            ]
-        },
-        {
-            precio_base: 912.00,
-            cpuBrand: "intel",
-            purpose: "gaming",
-            gpuBrand: "nvidia",
-            title: "PC Fijo Gaming Esencial Intel Core + RTX",
-            parts: [
-                { name: "CPU: Intel Core i5-12400F", price: 124.90, store: "PcComponentes", url: "https://www.pccomponentes.com/" },
-                { name: "GPU: NVIDIA RTX 4060 8GB GDDR6", price: 310.00, store: "Coolmod", url: "https://www.coolmod.com/" },
-                { name: "Placa Base: Gigabyte B760M DS3H", price: 109.00, store: "Amazon ES", url: "https://www.amazon.es/" },
-                { name: "RAM: Corsair Vengeance 16GB DDR4", price: 46.00, store: "Neobyte", url: "https://www.neobyte.es/" },
-                { name: "SSD: 1TB NVMe M.2 WD Black", price: 79.00, store: "Amazon ES", url: "https://www.amazon.es/" },
-                { name: "Fuente: Gigabyte P650B Bronze", price: 59.90, store: "PcComponentes", url: "https://www.pccomponentes.com/" },
-                { name: "Torre: Nox Hummer Nemesis", price: 65.00, store: "Coolmod", url: "https://www.coolmod.com/" }
-            ]
-        },
-        {
-            precio_base: 2450.00,
-            cpuBrand: "amd",
-            purpose: "gaming",
-            gpuBrand: "nvidia",
-            title: "PC Fijo ULTRA GAMING Entusiasta de Última Generación",
-            parts: [
-                { name: "CPU: AMD Ryzen 7 7800X3D (Top Gaming)", price: 399.00, store: "PcComponentes", url: "https://www.pccomponentes.com/" },
-                { name: "GPU: NVIDIA RTX 4080 Super 16GB", price: 1120.00, store: "Coolmod", url: "https://www.coolmod.com/" },
-                { name: "Placa Base: ASUS ROG Strix B650-A WiFi", price: 240.00, store: "Amazon ES", url: "https://www.amazon.es/" },
-                { name: "RAM: 32GB DDR5 6000MHz G.Skill", price: 135.00, store: "Neobyte", price: 135.00, store: "Neobyte", url: "https://www.neobyte.es/" },
-                { name: "SSD: 2TB Samsung 990 Pro NVMe", price: 180.00, store: "PcComponentes", url: "https://www.pccomponentes.com/" },
-                { name: "Fuente: Seasonic Focus 850W ATX 3.0", price: 165.00, store: "Amazon ES", url: "https://www.amazon.es/" },
-                { name: "Torre + Refr. Líquida 360mm Premium", price: 211.00, store: "Coolmod", url: "https://www.coolmod.com/" }
-            ]
-        }
-    ],
-    laptops: [
-        { cpuBrand: "amd", purpose: "office", gpuBrand: "indiferente", title: "Portátil Ofimática AMD Ryzen Económico", specs: "Lenovo IdeaPad Slim 3 | AMD Ryzen 5 7520U | 16GB RAM | 512GB SSD | 15.6\" FHD", approxPrice: 449.00, bestStore: "Amazon ES", url: "https://www.amazon.es/" },
-        { cpuBrand: "intel", purpose: "office", gpuBrand: "indiferente", title: "Portátil Ofimática Intel Core Ligero", specs: "ASUS Vivobook 15 | Intel Core i3-1215U | 16GB RAM | 512GB SSD | 15.6\" FHD", approxPrice: 399.00, bestStore: "PcComponentes", url: "https://www.pccomponentes.com/" },
-        { cpuBrand: "amd", purpose: "gaming", gpuBrand: "nvidia", title: "Portátil Gaming Equilibrado AMD + RTX", specs: "ASUS TUF Gaming A15 | AMD Ryzen 5 7535HS | 16GB RAM | 512GB SSD | NVIDIA RTX 3050 4GB", approxPrice: 699.00, bestStore: "PcComponentes", url: "https://www.pccomponentes.com/" },
-        { cpuBrand: "intel", purpose: "gaming", gpuBrand: "nvidia", title: "Portátil Gaming Avanzado Intel Core + RTX 4060", specs: "HP Victus 16 | Intel Core i7-13700H | 32GB RAM | 1TB SSD | NVIDIA RTX 4060 8GB", approxPrice: 1049.00, bestStore: "Coolmod", url: "https://www.coolmod.com/" },
-        { cpuBrand: "intel", purpose: "gaming", gpuBrand: "nvidia", title: "Portátil ULTRA GAMING Rendimiento Extremo", specs: "MSI Raider GE78 | Intel Core i9-14900HX | 32GB DDR5 | 2TB SSD | NVIDIA RTX 4080 12GB", approxPrice: 2599.00, bestStore: "PcComponentes", url: "https://www.pccomponentes.com/" }
-    ],
-    mobile: [
-        { name: "POCO X6 Pro 5G", desc: "Brutal rendimiento gaming en la gama media con pantalla Flow AMOLED.", antutu: 1390000, approxPrice: 319.00, bestStore: "PcComponentes", url: "https://www.pccomponentes.com/" },
-        { name: "Xiaomi Redmi Note 13 Pro 5G", desc: "Cámara de 200MP muy equilibrada y excelente pantalla.", antutu: 605000, approxPrice: 255.00, bestStore: "Amazon ES", url: "https://www.amazon.es/" },
-        { name: "Google Pixel 8a", desc: "Fotografía premium con IA de Google y 7 años de actualizaciones.", antutu: 1100000, approxPrice: 489.00, bestStore: "Amazon ES", url: "https://www.amazon.es/" }
-    ]
-};
+const fallbackDatabase = { pc: [], laptops: [], mobile: [] };
 
 const searchTypeSelect = document.getElementById('searchType');
 const pcFormatSelect = document.getElementById('pcFormat');
@@ -106,7 +15,6 @@ const purposeSelect = document.getElementById('purpose');
 function ajustarVisibilidadFiltros() {
     const type = searchTypeSelect.value;
     const purpose = purposeSelect.value;
-
     if (type === 'pc') {
         formatFilter.classList.remove('hidden');
         advancedComputerFilters.classList.remove('hidden');
@@ -139,7 +47,7 @@ document.getElementById('btnSearch').addEventListener('click', async () => {
     const resultsGrid = document.getElementById('resultsGrid');
     const storesList = document.getElementById('storesList');
 
-    resultsGrid.innerHTML = '<p class="text-gray-400 text-center col-span-3 py-4 font-medium">Procesando catálogo y optimizando ratio rendimiento/precio...</p>';
+    resultsGrid.innerHTML = '<p class="text-gray-400 text-center col-span-3 py-4 font-medium">Ejecutando algoritmo de rendimiento indexado (PassMark/AnTuTu)...</p>';
     resultsContainer.classList.remove('hidden');
     
     let dataSource = fallbackDatabase;
@@ -150,7 +58,9 @@ document.getElementById('btnSearch').addEventListener('click', async () => {
 
     resultsGrid.innerHTML = '';
 
-    // 1. TORRES DE ESCRITORIO POR PIEZAS (ALGORITMO POR APROXIMACIÓN)
+    // ALGORITMO DE SELECCIÓN POR RATIO TÉCNICO COMPARTIDO
+
+    // 1. TORRES DE ESCRITORIO POR PIEZAS
     if (type === 'pc' && format === 'desktop') {
         storesList.innerText = "PcComponentes, Coolmod, Neobyte, Amazon España";
         
@@ -160,29 +70,36 @@ document.getElementById('btnSearch').addEventListener('click', async () => {
             const matchCpu = (selectedCpu === 'indiferente') || (item.cpuBrand === selectedCpu);
             const matchPurpose = item.purpose === selectedPurpose;
             const matchGpu = (selectedPurpose === 'office') || (selectedGpu === 'indiferente') || (item.gpuBrand === selectedGpu);
-            
             return matchBudget && matchCpu && matchPurpose && matchGpu;
         });
 
         if (opcionesValidas.length > 0) {
+            // ALGORITMO PASSMARK: Ordena de mayor a menor según el rendimiento por euro (CPU Mark + GPU Mark) / Coste
             opcionesValidas.sort((a, b) => {
-                const priceA = a.parts.reduce((sum, p) => sum + p.price, 0);
-                const priceB = b.parts.reduce((sum, p) => sum + p.price, 0);
-                return priceB - priceA;
+                const precioA = a.parts.reduce((sum, p) => sum + p.price, 0);
+                const precioB = b.parts.reduce((sum, p) => sum + p.price, 0);
+                const ratioA = (a.passmark_cpu + a.passmark_gpu) / precioA;
+                const ratioB = (b.passmark_cpu + b.passmark_gpu) / precioB;
+                return ratioB - ratioA;
             });
 
             const config = opcionesValidas[0]; 
             let total = config.parts.reduce((sum, p) => sum + p.price, 0);
             let sobrante = budget - total;
+            const passmarkTotal = config.passmark_cpu + config.passmark_gpu;
 
             let html = `
-                <div class="bg-gray-800 p-6 rounded-xl border border-gray-750 shadow-md md:col-span-3">
+                <div class="bg-gray-800 p-6 rounded-xl border border-amber-500/30 shadow-md md:col-span-3">
                     <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 gap-4">
                         <div>
-                            <h3 class="text-xl font-bold text-blue-400">${config.title}</h3>
-                            <p class="text-xs text-gray-500 mt-1">Se adapta perfectamente. Te sobran <strong class="text-emerald-400">${sobrante.toFixed(2)}€</strong> de tu presupuesto.</p>
+                            <span class="text-xs bg-amber-500/10 text-amber-400 border border-amber-500/20 font-mono px-2 py-0.5 rounded font-bold">👑 Configuración Óptima por Rendimiento</span>
+                            <h3 class="text-xl font-bold text-white mt-2">${config.title}</h3>
+                            <p class="text-xs text-gray-400 mt-1">Sobrante de tu presupuesto: <strong class="text-emerald-400">${sobrante.toFixed(2)}€</strong></p>
                         </div>
-                        <span class="text-2xl font-black text-emerald-400 bg-gray-900/50 px-4 py-2 rounded border border-gray-700">${total.toFixed(2)}€</span>
+                        <div class="text-right">
+                            <span class="text-2xl font-black text-emerald-400 bg-gray-900/50 px-4 py-2 rounded border border-gray-700 block">${total.toFixed(2)}€</span>
+                            <span class="text-[10px] text-gray-500 font-mono mt-1 block">PassMark Total: ${passmarkTotal.toLocaleString()} pts</span>
+                        </div>
                     </div>
                     <div class="overflow-x-auto">
                         <table class="w-full text-sm text-left">
@@ -206,10 +123,10 @@ document.getElementById('btnSearch').addEventListener('click', async () => {
             html += `</tbody></table></div></div>`;
             resultsGrid.innerHTML = html;
         } else {
-            resultsGrid.innerHTML = `<p class="text-amber-400 text-center col-span-3 py-4">Presupuesto insuficiente para armar una torre fija de esas especificaciones. Intenta subir el presupuesto mínimo (Mínimo aprox: 420€).</p>`;
+            resultsGrid.innerHTML = `<p class="text-amber-400 text-center col-span-3 py-4">Presupuesto insuficiente para armar una torre fija bajo estos criterios en el mercado español.</p>`;
         }
 
-    // 2. FILTRADO PARA PORTÁTILES (ALGORITMO POR APROXIMACIÓN)
+    // 2. ORDENADORES PORTÁTILES (MÁXIMO PASSMARK POR EURO)
     } else if (type === 'pc' && format === 'laptop') {
         storesList.innerText = "Amazon España, PcComponentes, Coolmod, MediaMarkt";
         
@@ -222,18 +139,41 @@ document.getElementById('btnSearch').addEventListener('click', async () => {
         });
 
         if (laptopsDisponibles.length > 0) {
-            laptopsDisponibles.sort((a, b) => b.approxPrice - a.approxPrice);
+            // Ordenamos por rendimiento PassMark combinado por cada euro
+            laptopsDisponibles.sort((a, b) => {
+                const ratioA = (a.passmark_cpu + a.passmark_gpu) / a.approxPrice;
+                const ratioB = (b.passmark_cpu + b.passmark_gpu) / b.approxPrice;
+                return ratioB - ratioA;
+            });
 
-            laptopsDisponibles.forEach(l => {
+            laptopsDisponibles.forEach((l, index) => {
+                const esElMejor = index === 0;
+                const ptsTotal = l.passmark_cpu + l.passmark_gpu;
+                const ptsPorEuro = (ptsTotal / l.approxPrice).toFixed(0);
+
                 resultsGrid.innerHTML += `
-                    <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 flex flex-col justify-between shadow-md hover:border-blue-500/50 transition-all duration-300">
+                    <div class="bg-gray-800 p-6 rounded-xl border ${esElMejor ? 'border-amber-500/50 shadow-amber-500/5' : 'border-gray-700'} flex flex-col justify-between shadow-md hover:border-blue-500/50 transition-all duration-300">
                         <div>
                             <div class="flex justify-between items-center">
-                                <span class="text-xs bg-blue-500/10 text-blue-400 font-mono px-2 py-0.5 rounded border border-blue-500/20 font-semibold uppercase">${l.purpose}</span>
+                                <span class="text-xs ${esElMejor ? 'bg-amber-500/10 text-amber-400 border-amber-500/20' : 'bg-blue-500/10 text-blue-400 border-blue-500/20'} font-mono px-2 py-0.5 rounded border font-semibold uppercase">
+                                    ${esElMejor ? '👑 Top Potencia/Euro' : l.purpose}
+                                </span>
                                 <span class="text-xs text-gray-500 font-semibold font-mono uppercase">${l.cpuBrand}</span>
                             </div>
                             <h3 class="text-lg font-bold mt-3 mb-1 text-white">${l.title}</h3>
                             <p class="text-xs text-gray-400 font-mono bg-gray-900/50 p-2.5 rounded border border-gray-700/50 mt-2">${l.specs}</p>
+                            
+                            <div class="bg-gray-900/40 p-2.5 rounded-lg border border-gray-750 mt-3 text-[11px] font-mono">
+                                <div class="flex justify-between text-gray-400 mb-1">
+                                    <span>PassMark CPU:</span><span class="text-blue-400">${l.passmark_cpu.toLocaleString()}</span>
+                                </div>
+                                <div class="flex justify-between text-gray-400">
+                                    <span>PassMark GPU:</span><span class="text-purple-400">${l.passmark_gpu.toLocaleString()}</span>
+                                </div>
+                                <div class="text-right text-gray-500 text-[10px] border-t border-gray-700/60 mt-1.5 pt-1">
+                                    Rendimiento: ${ptsPorEuro} pts / 1€
+                                </div>
+                            </div>
                         </div>
                         <div class="border-t border-gray-700 pt-4 mt-6">
                             <div class="flex justify-between items-center mb-3">
@@ -248,34 +188,28 @@ document.getElementById('btnSearch').addEventListener('click', async () => {
                 `;
             });
         } else {
-            resultsGrid.innerHTML = `<p class="text-amber-400 text-center col-span-3 py-4">No se han encontrado portátiles que se ajusten a tus filtros y se mantengan bajo tu presupuesto.</p>`;
+            resultsGrid.innerHTML = `<p class="text-amber-400 text-center col-span-3 py-4">No se han encontrado portátiles recomendados con esa combinación por debajo de tu presupuesto.</p>`;
         }
 
-    // 3. SMARTPHONES CON RATIO POTENCIA (ANTUTU) / PRECIO AVANZADO
+    // 3. SMARTPHONES CON RATIO ANTUTU / PRECIO (Mantenido)
     } else if (type === 'mobile') {
         storesList.innerText = "Amazon España, BackMarket, PcComponentes, El Corte Inglés, Carrefour";
         let mobilesDisponibles = dataSource.mobile.filter(m => budget >= m.approxPrice);
 
         if (mobilesDisponibles.length > 0) {
-            // Ordenar por Ratio Calidad/Precio Puro (Puntos AnTuTu por cada Euro gastado)
-            mobilesDisponibles.sort((a, b) => {
-                const ratioA = a.antutu / a.approxPrice;
-                const ratioB = b.antutu / b.approxPrice;
-                return ratioB - ratioA;
-            });
+            mobilesDisponibles.sort((a, b) => (b.antutu / b.approxPrice) - (a.antutu / a.approxPrice));
 
             mobilesDisponibles.forEach((m, index) => {
                 const puntosPorEuro = (m.antutu / m.approxPrice).toFixed(0);
                 const esElMejor = index === 0;
                 const badgeColor = esElMejor ? 'bg-amber-500/20 text-amber-400 border-amber-500/30' : 'bg-blue-500/10 text-blue-400 border-blue-500/20';
-                const badgeText = esElMejor ? '👑 Máxima Calidad/Precio' : 'Smartphone Recomendado';
-
+                
                 resultsGrid.innerHTML += `
                     <div class="bg-gray-800 p-6 rounded-xl border ${esElMejor ? 'border-amber-500/50 shadow-amber-500/5' : 'border-gray-700'} flex flex-col justify-between shadow-md hover:scale-[1.01] transition-all duration-300">
                         <div>
                             <div class="flex justify-between items-center gap-2">
                                 <span class="text-xs font-mono px-2 py-0.5 rounded border font-semibold uppercase ${badgeColor}">
-                                    ${badgeText}
+                                    ${esElMejor ? '👑 Máxima Calidad/Precio' : 'Smartphone'}
                                 </span>
                                 <span class="text-[10px] text-gray-500 font-mono">Rank #${index + 1}</span>
                             </div>
@@ -290,11 +224,25 @@ document.getElementById('btnSearch').addEventListener('click', async () => {
                                     <div class="bg-blue-500 h-full" style="width: ${Math.min((m.antutu / 1600000) * 100, 100)}%"></div>
                                 </div>
                                 <div class="text-[10px] text-gray-500 text-right mt-1 font-mono">
-                                    Ofrece ${puntosPorEuro} pts por cada 1€ invertido
+                                    Ofrece ${puntosPorEuro} pts por cada 1€
                                 </div>
                             </div>
                         </div>
                         <div class="border-t border-gray-700 pt-4">
                             <div class="flex justify-between items-center mb-3">
                                 <span class="text-xs text-gray-400">Mejor precio</span>
-                                <span class="text-2xl font-black 
+                                <span class="text-2xl font-black text-emerald-400">${m.approxPrice.toFixed(2)}€</span>
+                            </div>
+                            <a href="${m.url}" target="_blank" rel="noopener noreferrer" class="block text-center w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 rounded text-xs transition">
+                                Ver en ${m.bestStore} ↗
+                            </a>
+                        </div>
+                    </div>
+                `;
+            });
+        } else {
+            resultsGrid.innerHTML = `<p class="text-amber-400 text-center col-span-3 py-4">Introduce un presupuesto mínimo de 150€ para mostrar smartphones viables.</p>`;
+        }
+    }
+});
+                                                                                                   
