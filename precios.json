@@ -1,0 +1,13 @@
+{
+  "ultima_actualizacion": "2026-07-07T06:30:00Z",
+  "componentes": {
+    "procesadores": [
+      {"id": "ryzen_5_5600g", "nombre": "AMD Ryzen 5 5600G", "precio": 119.95, "tienda": "PcComponentes", "url": "https://www.pccomponentes.com/..."},
+      {"id": "ryzen_5_5600x", "nombre": "AMD Ryzen 5 5600X", "precio": 132.90, "tienda": "Coolmod", "url": "https://www.coolmod.com/..."}
+    ],
+    "graficas": [
+      {"id": "rx_6650_xt", "nombre": "AMD Radeon RX 6650 XT 8GB", "precio": 254.99, "tienda": "PcComponentes", "url": "https://www.pccomponentes.com/..."},
+      {"id": "rtx_4060_ti", "nombre": "NVIDIA RTX 4060 Ti 16GB", "precio": 445.00, "tienda": "Coolmod", "url": "https://www.coolmod.com/..."}
+    ]
+  }
+}
