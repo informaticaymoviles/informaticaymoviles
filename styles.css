@@ -5,7 +5,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Personalización de la barra de desplazamiento Estilo Dark */
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
