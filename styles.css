@@ -1,44 +1,35 @@
 /* Custom Styles - informaticaymoviles.com */
 
-/* 1. Ajuste de fuentes y suavizado de texto global */
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* 2. Personalización de la barra de desplazamiento (Scrollbar) Estilo Dark */
+/* Personalización de la barra de desplazamiento Estilo Dark */
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #1f2937; /* bg-gray-850 aproximado */
+    background: #1f2937;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #4b5563; /* bg-gray-600 */
+    background: #4b5563;
     border-radius: 5px;
     border: 2px solid #1f2937;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #3b82f6; /* Azul brillante al pasar el ratón */
+    background: #3b82f6;
 }
 
-/* 3. Ajustes específicos para las tablas de hardware en pantallas móviles */
 .overflow-x-auto {
     scrollbar-width: thin;
     scrollbar-color: #4b5563 #1f2937;
 }
 
-/* 4. Efecto de desenfoque sutil para fondos de contenedores */
-.backdrop-blur-custom {
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-}
-
-/* 5. Clases auxiliares para alternar filas en las tablas */
 tr:nth-child(even) {
-    background-color: rgba(55, 65, 81, 0.3); /* Un gris muy transparente para legibilidad */
+    background-color: rgba(55, 65, 81, 0.3);
 }
