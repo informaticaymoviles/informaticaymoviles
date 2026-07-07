@@ -3,53 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>informaticaymoviles.com - Presupuestos de Hardware y Móviles</title>
-    <!-- Tailwind CSS para un diseño moderno y rápido -->
+    <title>informaticaymoviles.com - Presupuestos de Hardware y Móviles Inteligentes</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gray-900 text-gray-100 min-h-screen font-sans">
 
-    <!-- Navegación -->
     <nav class="bg-gray-800 border-b border-gray-700 p-4 sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
             <a href="#" class="text-xl font-bold text-blue-500 tracking-wider">informaticaymoviles<span class="text-emerald-400">.com</span></a>
-            <span class="text-xs bg-gray-700 px-2 py-1 rounded text-gray-400 border border-gray-600">Código Abierto</span>
+            <span class="text-xs bg-gray-700 px-2 py-1 rounded text-gray-400 border border-gray-600">v2.0 Beta Abierta</span>
         </div>
     </nav>
 
-    <!-- Hero / Configurador -->
     <main class="container mx-auto px-4 py-8 max-w-5xl">
         <header class="text-center mb-12">
-            <h1 class="text-4xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r content-center from-blue-400 to-emerald-400">
+            <h1 class="text-4xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400">
                 Encuentra tu setup o móvil ideal al mejor precio
             </h1>
-            <p class="text-gray-400 max-w-xl mx-auto">
+            <p class="text-gray-400 max-w-xl mx-auto text-sm">
                 Comparamos componentes y smartphones basados en tiendas de España como PcComponentes, Amazon, Coolmod, MediaMarkt y más.
             </p>
         </header>
 
-        <!-- Formulario de Entrada -->
-        <section class="bg-gray-800 p-6 rounded-xl border border-gray-700 shadow-xl max-w-2xl mx-auto mb-12">
+        <section class="bg-gray-800 p-6 rounded-xl border border-gray-700 shadow-xl max-w-3xl mx-auto mb-12">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                     <label class="block text-sm font-medium text-gray-400 mb-2">¿Qué estás buscando?</label>
-                    <select id="searchType" class="w-full bg-gray-700 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <select id="searchType" class="w-full bg-gray-700 border border-gray-600 rounded-lg p-3 text-white focus:ring-2 focus:ring-blue-500">
                         <option value="pc">Configuración de PC (Hardware)</option>
                         <option value="mobile">Móvil Calidad/Precio</option>
                     </select>
                 </div>
                 <div>
                     <label class="block text-sm font-medium text-gray-400 mb-2">Tu Presupuesto Máximo (€)</label>
-                    <input type="number" id="budget" value="800" min="200" max="4000" class="w-full bg-gray-700 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <input type="number" id="budget" value="800" min="150" max="4000" class="w-full bg-gray-700 border border-gray-600 rounded-lg p-3 text-white focus:ring-2 focus:ring-blue-500">
                 </div>
             </div>
-            <button id="btnSearch" class="w-full mt-6 bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-4 rounded-lg transition duration-200">
-                Calcular Recomendación
+
+            <div id="pcFilters" class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 transition-all duration-300">
+                <div>
+                    <label class="block text-sm font-medium text-gray-400 mb-2">Preferencia de Procesador</label>
+                    <select id="cpuBrand" class="w-full bg-gray-700 border border-gray-600 rounded-lg p-3 text-white focus:ring-2 focus:ring-blue-500">
+                        <option value="indiferente">Indiferente (Ver mejor opción)</option>
+                        <option value="amd">AMD Ryzen</option>
+                        <option value="intel">Intel Core</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-400 mb-2">Uso Principal / Tipo de Gráficos</label>
+                    <select id="purpose" class="w-full bg-gray-700 border border-gray-600 rounded-lg p-3 text-white focus:ring-2 focus:ring-blue-500">
+                        <option value="gaming">Gaming y Edición (Gráfica Dedicada)</option>
+                        <option value="office">Ofimática, Estudios y Multimedia (Gráficos Integrados)</option>
+                    </select>
+                </div>
+            </div>
+
+            <button id="btnSearch" class="w-full mt-6 bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-4 rounded-lg transition duration-200 shadow-lg">
+                Calcular Recomendación Optimizada
             </button>
         </section>
 
-        <!-- Contenedor de Resultados -->
         <section id="resultsContainer" class="hidden">
             <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
                 <span class="w-3 h-3 bg-emerald-400 rounded-full inline-block animate-pulse"></span>
@@ -57,20 +71,31 @@
             </h2>
             
             <div id="resultsGrid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Las tarjetas se inyectan dinámicamente con JavaScript -->
-            </div>
+                </div>
 
-            <!-- Tiendas de Referencia -->
             <div class="mt-8 p-4 bg-gray-800/50 rounded-lg text-center text-xs text-gray-500 border border-gray-700/50">
-                Precios de referencia estimados en base a: <span id="storesList"></span>
+                Precios de referencia estimados en base a catálogos competitivos en España: <span id="storesList" class="text-gray-300 font-medium"></span>
             </div>
         </section>
     </main>
 
-    <footer class="text-center py-8 text-gray-600 text-sm border-t border-gray-800 mt-12">
-        <p>© 2026 informaticaymoviles.com - Proyecto Libre de Código Abierto (GPL3 License)</p>
+    <footer class="bg-gray-950 text-gray-500 text-xs py-12 border-t border-gray-800 mt-24">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="bg-gray-900/50 p-5 rounded-lg border border-gray-800/80 mb-8 leading-relaxed">
+                <h4 class="text-gray-400 font-bold uppercase tracking-wider mb-2 text-[11px]">⚠️ Pliego de Descargo de Responsabilidad y Términos de Uso</h4>
+                <p class="mb-2"><strong>Naturaleza Informativa:</strong> Los precios, combinaciones de hardware, especificaciones técnicas y enlaces de tiendas (PcComponentes, Amazon España, Coolmod, Neobyte, BackMarket, El Corte Inglés, Carrefour, entre otras) mostrados en informaticaymoviles.com se procesan e indexan mediante algoritmos a título estrictamente informativo y orientativo.</p>
+                <p class="mb-2"><strong>Garantía de Precios:</strong> Debido a la alta volatilidad del mercado tecnológico en España y los tiempos de latencia en la actualización de cachés, puede existir un desfase temporal. El único precio, stock y condiciones válidas finales serán siempre los reflejados en la web oficial de la distribuidora en el instante exacto de realizar el pago.</p>
+                <p><strong>Vinculación Legal:</strong> Este sitio web es de uso libre y código abierto (GPLv3), no vende productos directamente ni actúa como intermediario comercial formal. Cualquier reclamación sobre el soporte técnico, envíos, desistimientos o garantías legales de los componentes de hardware o teléfonos móviles seleccionados deberá tramitarse directamente con el comercio final donde se complete la transacción.</p>
+            </div>
+            
+            <div class="text-center text-gray-600">
+                <p class="mb-1">© 2026 informaticaymoviles.com — Proyecto Comunitario de Código Abierto bajo Licencia GNU GPLv3.</p>
+                <p>Sujeto a las Leyes de Comercio Electrónico de España y la Unión Europea.</p>
+            </div>
+        </div>
     </footer>
 
     <script src="app.js"></script>
 </body>
-</html>
+    </html>
+    
