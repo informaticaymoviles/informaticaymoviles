@@ -12,17 +12,17 @@
     <nav class="bg-gray-800 border-b border-gray-700 p-4 sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
             <a href="#" class="text-xl font-bold text-blue-500 tracking-wider">informaticaymoviles<span class="text-emerald-400">.com</span></a>
-            <span class="text-xs bg-gray-700 px-2 py-1 rounded text-gray-400 border border-gray-600">v2.0 Beta Abierta</span>
+            <span class="text-xs bg-gray-700 px-2 py-1 rounded text-gray-400 border border-gray-600">v3.0 Open Source</span>
         </div>
     </nav>
 
     <main class="container mx-auto px-4 py-8 max-w-5xl">
         <header class="text-center mb-12">
             <h1 class="text-4xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400">
-                Encuentra tu setup o móvil ideal al mejor precio
+                Encuentra tu setup, portátil o móvil ideal al mejor precio
             </h1>
             <p class="text-gray-400 max-w-xl mx-auto text-sm">
-                Comparamos componentes y smartphones basados en tiendas de España como PcComponentes, Amazon, Coolmod, MediaMarkt y más.
+                Comparamos componentes y dispositivos basados en las tiendas más competitivas de España como PcComponentes, Amazon, Coolmod y más.
             </p>
         </header>
 
@@ -31,7 +31,7 @@
                 <div>
                     <label class="block text-sm font-medium text-gray-400 mb-2">¿Qué estás buscando?</label>
                     <select id="searchType" class="w-full bg-gray-700 border border-gray-600 rounded-lg p-3 text-white focus:ring-2 focus:ring-blue-500">
-                        <option value="pc">Configuración de PC (Hardware)</option>
+                        <option value="pc">Configuración de PC o Equipos</option>
                         <option value="mobile">Móvil Calidad/Precio</option>
                     </select>
                 </div>
@@ -41,7 +41,15 @@
                 </div>
             </div>
 
-            <div id="pcFilters" class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 transition-all duration-300">
+            <div id="formatFilter" class="mt-4 transition-all duration-300">
+                <label class="block text-sm font-medium text-gray-400 mb-2">¿Qué formato prefieres?</label>
+                <select id="pcFormat" class="w-full bg-gray-700 border border-gray-600 rounded-lg p-3 text-white focus:ring-2 focus:ring-blue-500">
+                    <option value="desktop">PC de Escritorio (Torre Fija por piezas)</option>
+                    <option value="laptop">Ordenador Portátil (Movilidad)</option>
+                </select>
+            </div>
+
+            <div id="desktopFilters" class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 transition-all duration-300">
                 <div>
                     <label class="block text-sm font-medium text-gray-400 mb-2">Preferencia de Procesador</label>
                     <select id="cpuBrand" class="w-full bg-gray-700 border border-gray-600 rounded-lg p-3 text-white focus:ring-2 focus:ring-blue-500">
@@ -54,7 +62,7 @@
                     <label class="block text-sm font-medium text-gray-400 mb-2">Uso Principal / Tipo de Gráficos</label>
                     <select id="purpose" class="w-full bg-gray-700 border border-gray-600 rounded-lg p-3 text-white focus:ring-2 focus:ring-blue-500">
                         <option value="gaming">Gaming y Edición (Gráfica Dedicada)</option>
-                        <option value="office">Ofimática, Estudios y Multimedia (Gráficos Integrados)</option>
+                        <option value="office">Ofimática y Multimedia (Gráficos Integrados)</option>
                     </select>
                 </div>
             </div>
@@ -97,5 +105,4 @@
 
     <script src="app.js"></script>
 </body>
-    </html>
-    
+</html>
