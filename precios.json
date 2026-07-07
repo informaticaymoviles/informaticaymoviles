@@ -3,37 +3,121 @@
   "pc": [
     {
       "budgetMin": 300,
-      "budgetMax": 600,
+      "budgetMax": 650,
       "cpuBrand": "amd",
       "purpose": "office",
-      "title": "PC Ofimática Avanzada / Multimedia AMD Ryzen",
+      "title": "PC Fijo Ofimática Avanzada AMD Ryzen (Gráficos Integrados)",
       "parts": [
-        { "name": "CPU: AMD Ryzen 5 5600G (Gráficos Vega Integrados)", "price": 119.90, "store": "PcComponentes", "url": "https://www.pccomponentes.com/amd-ryzen-5-5600g-44ghz" },
-        { "name": "Placa Base: Gigabyte B450M DS3H V2", "price": 74.99, "store": "Amazon ES", "url": "https://www.amazon.es/dp/B08K16S4K1" },
-        { "name": "RAM: Corsair Vengeance LPX 16GB (2x8GB) DDR4", "price": 42.50, "store": "Coolmod", "url": "https://www.coolmod.com/" },
-        { "name": "SSD: Kingston NV2 1TB NVMe M.2 PCIe 4.0", "price": 61.99, "store": "Neobyte", "url": "https://www.neobyte.es/" },
-        { "name": "Fuente + Torre: Aerocool 500W Kit", "price": 55.00, "store": "Amazon ES", "url": "https://www.amazon.es/" }
+        { "name": "CPU: AMD Ryzen 5 5600G (Gráficos Vega)", "price": 119.90, "store": "PcComponentes", "url": "https://www.pccomponentes.com/" },
+        { "name": "Placa Base: Gigabyte B450M DS3H", "price": 74.95, "store": "Amazon ES", "url": "https://www.amazon.es/" },
+        { "name": "RAM: 16GB DDR4 3200MHz Corsair", "price": 45.00, "store": "Coolmod", "url": "https://www.coolmod.com/" },
+        { "name": "SSD: 1TB NVMe M.2 Kingston", "price": 62.00, "store": "Neobyte", "url": "https://www.neobyte.es/" },
+        { "name": "Fuente + Caja: MicroATX 500W", "price": 58.00, "store": "Amazon ES", "url": "https://www.amazon.es/" }
       ]
     },
     {
-      "budgetMin": 601,
-      "budgetMax": 1000,
+      "budgetMin": 300,
+      "budgetMax": 650,
+      "cpuBrand": "intel",
+      "purpose": "office",
+      "title": "PC Fijo Multimedia Intel Core Essential (Gráficos Integrados)",
+      "parts": [
+        { "name": "CPU: Intel Core i3-12100 con Intel UHD", "price": 105.00, "store": "PcComponentes", "url": "https://www.pccomponentes.com/" },
+        { "name": "Placa Base: ASUS Prime H610M", "price": 82.00, "store": "Neobyte", "url": "https://www.neobyte.es/" },
+        { "name": "RAM: 16GB DDR4 3200MHz Crucial", "price": 41.50, "store": "Amazon ES", "url": "https://www.amazon.es/" },
+        { "name": "SSD: 500GB NVMe M.2 Western Digital", "price": 46.00, "store": "Coolmod", "url": "https://www.coolmod.com/" },
+        { "name": "Fuente + Caja: ATX Estándar 500W", "price": 55.00, "store": "Amazon ES", "url": "https://www.amazon.es/" }
+      ]
+    },
+    {
+      "budgetMin": 651,
+      "budgetMax": 1300,
+      "cpuBrand": "amd",
+      "purpose": "gaming",
+      "title": "PC Fijo Gaming Custom AMD Ryzen + Radeon RX Dedicada",
+      "parts": [
+        { "name": "CPU: AMD Ryzen 5 5600X", "price": 135.00, "store": "Coolmod", "url": "https://www.coolmod.com/" },
+        { "name": "GPU: AMD Radeon RX 6650 XT 8GB", "price": 259.99, "store": "PcComponentes", "url": "https://www.pccomponentes.com/" },
+        { "name": "Placa Base: MSI B550M PRO-VDH", "price": 95.00, "store": "Amazon ES", "url": "https://www.amazon.es/" },
+        { "name": "RAM: 16GB DDR4 3600MHz Kingston", "price": 48.00, "store": "Neobyte", "url": "https://www.neobyte.es/" },
+        { "name": "SSD: 1TB NVMe Crucial PCIe 4.0", "price": 69.90, "store": "PcComponentes", "url": "https://www.pccomponentes.com/" },
+        { "name": "Fuente: Corsair CX650 80+ Bronze", "price": 74.50, "store": "Amazon ES", "url": "https://www.amazon.es/" },
+        { "name": "Torre: MSI Forge RGB", "price": 62.00, "store": "Coolmod", "url": "https://www.coolmod.com/" }
+      ]
+    },
+    {
+      "budgetMin": 651,
+      "budgetMax": 1300,
       "cpuBrand": "intel",
       "purpose": "gaming",
-      "title": "PC Gaming Equilibrado Intel Core + Gráfica Dedicada",
+      "title": "PC Fijo Gaming Custom Intel Core + RTX Dedicada",
       "parts": [
-        { "name": "CPU: Intel Core i5-12400F 4.4GHz", "price": 124.99, "store": "PcComponentes", "url": "https://www.pccomponentes.com/intel-core-i5-12400f-25ghz" },
-        { "name": "GPU: ASUS Dual GeForce RTX 4060 8GB GDDR6", "price": 315.00, "store": "Coolmod", "url": "https://www.coolmod.com/" },
-        { "name": "Placa Base: MSI PRO B760M-P DDR4", "price": 99.90, "store": "Amazon ES", "url": "https://www.amazon.es/" },
-        { "name": "RAM: G.Skill Aegis 16GB DDR4 3200MHz", "price": 39.00, "store": "Neobyte", "url": "https://www.neobyte.es/" },
-        { "name": "SSD: Crucial P3 1TB PCIe M.2", "price": 68.50, "store": "PcComponentes", "url": "https://www.pccomponentes.com/" },
-        { "name": "Fuente: Corsair CX650 650W 80 Plus Bronze", "price": 69.99, "store": "Amazon ES", "url": "https://www.amazon.es/" },
-        { "name": "Torre: Tempus RGB Atx Case", "price": 45.00, "store": "Coolmod", "url": "https://www.coolmod.com/" }
+        { "name": "CPU: Intel Core i5-12400F", price: 124.90, store: "PcComponentes", url: "https://www.pccomponentes.com/" },
+        { "name": "GPU: NVIDIA RTX 4060 8GB GDDR6", price: 310.00, store: "Coolmod", url: "https://www.coolmod.com/" },
+        { "name": "Placa Base: Gigabyte B760M DS3H", price: 109.00, store: "Amazon ES", url: "https://www.amazon.es/" },
+        { "name": "RAM: Corsair Vengeance 16GB DDR4", price: 46.00, store: "Neobyte", url: "https://www.neobyte.es/" },
+        { "name": "SSD: 1TB NVMe M.2 WD Black", price: 79.00, store: "Amazon ES", url: "https://www.amazon.es/" },
+        { "name": "Fuente: Gigabyte P650B Bronze", price: 59.90, store: "PcComponentes", url: "https://www.pccomponentes.com/" },
+        { "name": "Torre: Nox Hummer Nemesis", price: 65.00, store: "Coolmod", url: "https://www.coolmod.com/" }
       ]
     }
   ],
+  "laptops": [
+    {
+      "budgetMin": 300,
+      "budgetMax": 599,
+      "title": "Portátil Estudiantes / Teletrabajo Económico",
+      "specs": "Lenovo IdeaPad Slim 3 | AMD Ryzen 5 7520U | 16GB RAM | 512GB SSD | 15.6\" FHD",
+      "approxPrice": 449.00,
+      "bestStore": "Amazon ES",
+      "url": "https://www.amazon.es/"
+    },
+    {
+      "budgetMin": 600,
+      "budgetMax": 999,
+      "title": "Portátil Gaming Esencial / Rendimiento",
+      "specs": "ASUS TUF Gaming A15 | AMD Ryzen 5 7535HS | 16GB RAM | 512GB SSD | NVIDIA RTX 3050",
+      "approxPrice": 699.00,
+      "bestStore": "PcComponentes",
+      "url": "https://www.pccomponentes.com/"
+    },
+    {
+      "budgetMin": 1000,
+      "budgetMax": 2500,
+      "title": "Portátil Gama Alta / Diseñadores y Gaming",
+      "specs": "HP Victus 16 | Intel Core i7-13700H | 32GB RAM | 1TB SSD | NVIDIA RTX 4060",
+      "approxPrice": 1049.00,
+      "bestStore": "Coolmod",
+      "url": "https://www.coolmod.com/"
+    }
+  ],
   "mobile": [
-    { "budgetMin": 150, "budgetMax": 300, "name": "POCO X6 Pro 5G / Xiaomi Redmi Note 13", "desc": "Pantalla AMOLED a 120Hz, procesador Dimensity ideal para multitarea y gran batería.", "approxPrice": 279.00, "bestStore": "Amazon ES", "url": "https://www.amazon.es/" },
-    { "budgetMin": 301, "budgetMax: 600", "name": "Google Pixel 8a / Nothing Phone (2a)", "desc": "Fotografía de nivel profesional con inteligencia artificial y software Android puro sin añadidos.", "approxPrice: 499.00, "bestStore": "PcComponentes", "url": "https://www.pccomponentes.com/" }
+    {
+      "budgetMin": 150,
+      "budgetMax": 299,
+      "name": "POCO X6 Pro 5G / Redmi Note 13",
+      "desc": "Pantalla AMOLED fluida y autonomía sobresaliente para el día a día.",
+      "approxPrice": 189.00,
+      "bestStore": "Amazon ES / Carrefour",
+      "url": "https://www.amazon.es/"
+    },
+    {
+      "budgetMin": 300,
+      "budgetMax": 549,
+      "name": "Nothing Phone (2a) / POCO F6",
+      "desc": "Potencia bruta para tareas exigentes, diseño disruptivo y carga rápida.",
+      "approxPrice": 339.00,
+      "bestStore": "PcComponentes",
+      "url": "https://www.pccomponentes.com/"
+    },
+    {
+      "budgetMin": 550,
+      "budgetMax": 2000,
+      "name": "Google Pixel 8a / iPhone 15 Reacondicionado",
+      "desc": "Fotografía de nivel profesional con IA y un soporte de actualizaciones muy extenso.",
+      "approxPrice": 520.00,
+      "bestStore": "BackMarket",
+      "url": "https://www.backmarket.es/"
+    }
   ]
 }
