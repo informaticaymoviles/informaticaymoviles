@@ -1,11 +1,11 @@
 {
-  "ultima_actualizacion": "2026-07-07T06:30:00Z",
+  "ultima_actualizacion": "2026-07-07T08:00:00Z",
   "pc": [
     {
-      "budgetMin": 300,
-      "budgetMax": 650,
+      "precio_base": 440.00,
       "cpuBrand": "amd",
       "purpose": "office",
+      "gpuBrand": "indiferente",
       "title": "PC Fijo Ofimática Avanzada AMD Ryzen (Gráficos Integrados)",
       "parts": [
         { "name": "CPU: AMD Ryzen 5 5600G (Gráficos Vega)", "price": 119.90, "store": "PcComponentes", "url": "https://www.pccomponentes.com/" },
@@ -16,10 +16,10 @@
       ]
     },
     {
-      "budgetMin": 300,
-      "budgetMax": 650,
+      "precio_base": 412.00,
       "cpuBrand": "intel",
       "purpose": "office",
+      "gpuBrand": "indiferente",
       "title": "PC Fijo Multimedia Intel Core Essential (Gráficos Integrados)",
       "parts": [
         { "name": "CPU: Intel Core i3-12100 con Intel UHD", "price": 105.00, "store": "PcComponentes", "url": "https://www.pccomponentes.com/" },
@@ -30,11 +30,11 @@
       ]
     },
     {
-      "budgetMin": 651,
-      "budgetMax": 2000,
+      "precio_base": 818.00,
       "cpuBrand": "amd",
       "purpose": "gaming",
-      "title": "PC Fijo Gaming Custom AMD Ryzen + Radeon RX Dedicada",
+      "gpuBrand": "amd",
+      "title": "PC Fijo Gaming Calidad/Precio AMD Ryzen + Radeon RX",
       "parts": [
         { "name": "CPU: AMD Ryzen 5 5600X", "price": 135.00, "store": "Coolmod", "url": "https://www.coolmod.com/" },
         { "name": "GPU: AMD Radeon RX 6650 XT 8GB", "price": 259.99, "store": "PcComponentes", "url": "https://www.pccomponentes.com/" },
@@ -46,92 +46,108 @@
       ]
     },
     {
-      "budgetMin": 651,
-      "budgetMax": 2000,
+      "precio_base": 912.00,
       "cpuBrand": "intel",
       "purpose": "gaming",
-      "title": "PC Fijo Gaming Custom Intel Core + RTX Dedicada",
+      "gpuBrand": "nvidia",
+      "title": "PC Fijo Gaming Esencial Intel Core + RTX",
       "parts": [
-        { "name": "CPU: Intel Core i5-12400F", price: 124.90, store: "PcComponentes", "url": "https://www.pccomponentes.com/" },
-        { "name": "GPU: NVIDIA RTX 4060 8GB GDDR6", price: 310.00, store: "Coolmod", url: "https://www.coolmod.com/" },
-        { "name": "Placa Base: Gigabyte B760M DS3H", price: 109.00, store: "Amazon ES", url: "https://www.amazon.es/" },
-        { "name": "RAM: Corsair Vengeance 16GB DDR4", price: 46.00, store: "Neobyte", url: "https://www.neobyte.es/" },
-        { "name": "SSD: 1TB NVMe M.2 WD Black", price: 79.00, store: "Amazon ES", url: "https://www.amazon.es/" },
-        { "name": "Fuente: Gigabyte P650B Bronze", price: 59.90, store: "PcComponentes", url: "https://www.pccomponentes.com/" },
-        { "name": "Torre: Nox Hummer Nemesis", price: 65.00, store: "Coolmod", url: "https://www.coolmod.com/" }
+        { "name": "CPU: Intel Core i5-12400F", "price": 124.90, "store": "PcComponentes", "url": "https://www.pccomponentes.com/" },
+        { "name": "GPU: NVIDIA RTX 4060 8GB GDDR6", "price": 310.00, "store": "Coolmod", "url": "https://www.coolmod.com/" },
+        { "name": "Placa Base: Gigabyte B760M DS3H", "price": 109.00, "store": "Amazon ES", "url": "https://www.amazon.es/" },
+        { "name": "RAM: Corsair Vengeance 16GB DDR4", "price": 46.00, "store": "Neobyte", "url": "https://www.neobyte.es/" },
+        { "name": "SSD: 1TB NVMe M.2 WD Black", "price": 79.00, "store": "Amazon ES", "url": "https://www.amazon.es/" },
+        { "name": "Fuente: Gigabyte P650B Bronze", "price": 59.90, "store": "PcComponentes", "url": "https://www.pccomponentes.com/" },
+        { "name": "Torre: Nox Hummer Nemesis", "price": 65.00, "store": "Coolmod", "url": "https://www.coolmod.com/" }
+      ]
+    },
+    {
+      "precio_base": 2450.00,
+      "cpuBrand": "amd",
+      "purpose": "gaming",
+      "gpuBrand": "nvidia",
+      "title": "PC Fijo ULTRA GAMING Entusiasta (Presupuestos Altos)",
+      "parts": [
+        { "name": "CPU: AMD Ryzen 7 7805X3D (El mejor para juegos)", "price": 399.00, "store": "PcComponentes", "url": "https://www.pccomponentes.com/" },
+        { "name": "GPU: NVIDIA RTX 4080 Super 16GB", "price": 1120.00, "store": "Coolmod", "url": "https://www.coolmod.com/" },
+        { "name": "Placa Base: ASUS ROG Strix B650-A WiFi", "price": 240.00, "store": "Amazon ES", "url": "https://www.amazon.es/" },
+        { "name": "RAM: 32GB DDR5 6000MHz G.Skill", "price": 135.00, "store": "Neobyte", "url": "https://www.neobyte.es/" },
+        { "name": "SSD: 2TB Samsung 990 Pro NVMe", "price": 180.00, "store": "PcComponentes", "url": "https://www.pccomponentes.com/" },
+        { "name": "Fuente: Seasonic Focus 850W ATX 3.0 Gold", "price": 165.00, "store": "Amazon ES", "url": "https://www.amazon.es/" },
+        { "name": "Torre + Refr. Líquida 360mm Corsair", "price": 211.00, "store": "Coolmod", "url": "https://www.coolmod.com/" }
       ]
     }
   ],
   "laptops": [
     {
-      "budgetMin": 300,
-      "budgetMax": 700,
       "cpuBrand": "amd",
       "purpose": "office",
+      "gpuBrand": "indiferente",
       "title": "Portátil Ofimática AMD Ryzen Económico",
-      "specs": "Lenovo IdeaPad Slim 3 | AMD Ryzen 5 7520U | 16GB RAM | 512GB SSD | 15.6\" FHD | Gran Batería",
+      "specs": "Lenovo IdeaPad Slim 3 | AMD Ryzen 5 7520U | 16GB RAM | 512GB SSD | 15.6\" FHD",
       "approxPrice": 449.00,
       "bestStore": "Amazon ES",
       "url": "https://www.amazon.es/"
     },
     {
-      "budgetMin": 300,
-      "budgetMax": 700,
       "cpuBrand": "intel",
       "purpose": "office",
-      "title": "Portátil Ofimática Intel Core Eficiente",
-      "specs": "ASUS Vivobook 15 | Intel Core i3-1215U | 16GB RAM | 512GB SSD | 15.6\" FHD | Ligero",
+      "gpuBrand": "indiferente",
+      "title": "Portátil Ofimática Intel Core Ligero",
+      "specs": "ASUS Vivobook 15 | Intel Core i3-1215U | 16GB RAM | 512GB SSD | 15.6\" FHD",
       "approxPrice": 399.00,
       "bestStore": "PcComponentes",
       "url": "https://www.pccomponentes.com/"
     },
     {
-      "budgetMin": 600,
-      "budgetMax": 2500,
       "cpuBrand": "amd",
       "purpose": "gaming",
-      "title": "Portátil Gaming Equilibrado AMD + Gráfica RTX",
+      "gpuBrand": "nvidia",
+      "title": "Portátil Gaming Equilibrado AMD + RTX",
       "specs": "ASUS TUF Gaming A15 | AMD Ryzen 5 7535HS | 16GB RAM | 512GB SSD | NVIDIA RTX 3050 4GB",
       "approxPrice": 699.00,
       "bestStore": "PcComponentes",
       "url": "https://www.pccomponentes.com/"
     },
     {
-      "budgetMin": 600,
-      "budgetMax": 2500,
       "cpuBrand": "intel",
       "purpose": "gaming",
-      "title": "Portátil Gaming Avanzado Intel + Gráfica RTX Top",
+      "gpuBrand": "nvidia",
+      "title": "Portátil Gaming Avanzado Intel Core + RTX 4060",
       "specs": "HP Victus 16 | Intel Core i7-13700H | 32GB RAM | 1TB SSD | NVIDIA RTX 4060 8GB",
       "approxPrice": 1049.00,
       "bestStore": "Coolmod",
       "url": "https://www.coolmod.com/"
+    },
+    {
+      "cpuBrand": "intel",
+      "purpose": "gaming",
+      "gpuBrand": "nvidia",
+      "title": "Portátil ULTRA GAMING Rendimiento Extremo",
+      "specs": "MSI Raider GE78 | Intel Core i9-14900HX | 32GB DDR5 | 2TB SSD | NVIDIA RTX 4080 12GB",
+      "approxPrice": 2599.00,
+      "bestStore": "PcComponentes",
+      "url": "https://www.pccomponentes.com/"
     }
   ],
   "mobile": [
     {
-      "budgetMin": 150,
-      "budgetMax": 299,
       "name": "POCO X6 Pro 5G / Redmi Note 13",
       "desc": "Pantalla AMOLED fluida a 120Hz y autonomía sobresaliente para el uso diario.",
       "approxPrice": 189.00,
-      "bestStore": "Amazon ES / Carrefour",
+      "bestStore": "Amazon ES",
       "url": "https://www.amazon.es/"
     },
     {
-      "budgetMin": 300,
-      "budgetMax": 549,
       "name": "Nothing Phone (2a) / POCO F6",
-      "desc": "Potencia ideal para tareas multitarea exigentes, diseño semitransparente disruptivo y carga rápida.",
+      "desc": "Potencia ideal para tareas exigentes, diseño disruptivo y carga rápida.",
       "approxPrice": 339.00,
       "bestStore": "PcComponentes",
       "url": "https://www.pccomponentes.com/"
     },
     {
-      "budgetMin": 550,
-      "budgetMax": 3000,
       "name": "Google Pixel 8a / iPhone 15 Reacondicionado",
-      "desc": "Fotografía computacional de nivel profesional con inteligencia artificial y un soporte extenso de actualizaciones.",
+      "desc": "Fotografía computacional premium con IA y soporte de actualizaciones muy extenso.",
       "approxPrice": 520.00,
       "bestStore": "BackMarket",
       "url": "https://www.backmarket.es/"
