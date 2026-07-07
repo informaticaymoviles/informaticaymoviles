@@ -1,34 +1,27 @@
 /* Custom Styles - informaticaymoviles.com */
-
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
 }
-
 ::-webkit-scrollbar-track {
     background: #1f2937;
 }
-
 ::-webkit-scrollbar-thumb {
     background: #4b5563;
     border-radius: 5px;
     border: 2px solid #1f2937;
 }
-
 ::-webkit-scrollbar-thumb:hover {
     background: #3b82f6;
 }
-
 .overflow-x-auto {
     scrollbar-width: thin;
     scrollbar-color: #4b5563 #1f2937;
 }
-
 tr:nth-child(even) {
     background-color: rgba(55, 65, 81, 0.3);
 }
