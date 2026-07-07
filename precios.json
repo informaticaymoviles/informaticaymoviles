@@ -31,7 +31,7 @@
     },
     {
       "budgetMin": 651,
-      "budgetMax": 1300,
+      "budgetMax": 2000,
       "cpuBrand": "amd",
       "purpose": "gaming",
       "title": "PC Fijo Gaming Custom AMD Ryzen + Radeon RX Dedicada",
@@ -47,12 +47,12 @@
     },
     {
       "budgetMin": 651,
-      "budgetMax": 1300,
+      "budgetMax": 2000,
       "cpuBrand": "intel",
       "purpose": "gaming",
       "title": "PC Fijo Gaming Custom Intel Core + RTX Dedicada",
       "parts": [
-        { "name": "CPU: Intel Core i5-12400F", price: 124.90, store: "PcComponentes", url: "https://www.pccomponentes.com/" },
+        { "name": "CPU: Intel Core i5-12400F", price: 124.90, store: "PcComponentes", "url": "https://www.pccomponentes.com/" },
         { "name": "GPU: NVIDIA RTX 4060 8GB GDDR6", price: 310.00, store: "Coolmod", url: "https://www.coolmod.com/" },
         { "name": "Placa Base: Gigabyte B760M DS3H", price: 109.00, store: "Amazon ES", url: "https://www.amazon.es/" },
         { "name": "RAM: Corsair Vengeance 16GB DDR4", price: 46.00, store: "Neobyte", url: "https://www.neobyte.es/" },
@@ -65,27 +65,44 @@
   "laptops": [
     {
       "budgetMin": 300,
-      "budgetMax": 599,
-      "title": "Portátil Estudiantes / Teletrabajo Económico",
-      "specs": "Lenovo IdeaPad Slim 3 | AMD Ryzen 5 7520U | 16GB RAM | 512GB SSD | 15.6\" FHD",
+      "budgetMax": 700,
+      "cpuBrand": "amd",
+      "purpose": "office",
+      "title": "Portátil Ofimática AMD Ryzen Económico",
+      "specs": "Lenovo IdeaPad Slim 3 | AMD Ryzen 5 7520U | 16GB RAM | 512GB SSD | 15.6\" FHD | Gran Batería",
       "approxPrice": 449.00,
       "bestStore": "Amazon ES",
       "url": "https://www.amazon.es/"
     },
     {
+      "budgetMin": 300,
+      "budgetMax": 700,
+      "cpuBrand": "intel",
+      "purpose": "office",
+      "title": "Portátil Ofimática Intel Core Eficiente",
+      "specs": "ASUS Vivobook 15 | Intel Core i3-1215U | 16GB RAM | 512GB SSD | 15.6\" FHD | Ligero",
+      "approxPrice": 399.00,
+      "bestStore": "PcComponentes",
+      "url": "https://www.pccomponentes.com/"
+    },
+    {
       "budgetMin": 600,
-      "budgetMax": 999,
-      "title": "Portátil Gaming Esencial / Rendimiento",
-      "specs": "ASUS TUF Gaming A15 | AMD Ryzen 5 7535HS | 16GB RAM | 512GB SSD | NVIDIA RTX 3050",
+      "budgetMax": 2500,
+      "cpuBrand": "amd",
+      "purpose": "gaming",
+      "title": "Portátil Gaming Equilibrado AMD + Gráfica RTX",
+      "specs": "ASUS TUF Gaming A15 | AMD Ryzen 5 7535HS | 16GB RAM | 512GB SSD | NVIDIA RTX 3050 4GB",
       "approxPrice": 699.00,
       "bestStore": "PcComponentes",
       "url": "https://www.pccomponentes.com/"
     },
     {
-      "budgetMin": 1000,
+      "budgetMin": 600,
       "budgetMax": 2500,
-      "title": "Portátil Gama Alta / Diseñadores y Gaming",
-      "specs": "HP Victus 16 | Intel Core i7-13700H | 32GB RAM | 1TB SSD | NVIDIA RTX 4060",
+      "cpuBrand": "intel",
+      "purpose": "gaming",
+      "title": "Portátil Gaming Avanzado Intel + Gráfica RTX Top",
+      "specs": "HP Victus 16 | Intel Core i7-13700H | 32GB RAM | 1TB SSD | NVIDIA RTX 4060 8GB",
       "approxPrice": 1049.00,
       "bestStore": "Coolmod",
       "url": "https://www.coolmod.com/"
@@ -96,7 +113,7 @@
       "budgetMin": 150,
       "budgetMax": 299,
       "name": "POCO X6 Pro 5G / Redmi Note 13",
-      "desc": "Pantalla AMOLED fluida y autonomía sobresaliente para el día a día.",
+      "desc": "Pantalla AMOLED fluida a 120Hz y autonomía sobresaliente para el uso diario.",
       "approxPrice": 189.00,
       "bestStore": "Amazon ES / Carrefour",
       "url": "https://www.amazon.es/"
@@ -105,16 +122,16 @@
       "budgetMin": 300,
       "budgetMax": 549,
       "name": "Nothing Phone (2a) / POCO F6",
-      "desc": "Potencia bruta para tareas exigentes, diseño disruptivo y carga rápida.",
+      "desc": "Potencia ideal para tareas multitarea exigentes, diseño semitransparente disruptivo y carga rápida.",
       "approxPrice": 339.00,
       "bestStore": "PcComponentes",
       "url": "https://www.pccomponentes.com/"
     },
     {
       "budgetMin": 550,
-      "budgetMax": 2000,
+      "budgetMax": 3000,
       "name": "Google Pixel 8a / iPhone 15 Reacondicionado",
-      "desc": "Fotografía de nivel profesional con IA y un soporte de actualizaciones muy extenso.",
+      "desc": "Fotografía computacional de nivel profesional con inteligencia artificial y un soporte extenso de actualizaciones.",
       "approxPrice": 520.00,
       "bestStore": "BackMarket",
       "url": "https://www.backmarket.es/"
