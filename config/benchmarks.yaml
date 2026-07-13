@@ -1,0 +1,46 @@
+# Fuentes de benchmark y parámetros de la fórmula "calidad/precio".
+#
+# Todas las URLs de esta sección fueron verificadas por inspección real
+# (13/07/2026): las tres devuelven tablas HTML estáticas reales (no dependen
+# de JavaScript), por lo que un scraper simple con requests+BeautifulSoup
+# funciona sin necesitar navegador headless. Ver src/benchmarks/passmark.py
+# y src/benchmarks/antutu.py para el detalle de columnas y limitaciones.
+
+passmark:
+  cpu_urls:
+    - "https://www.cpubenchmark.net/cpu_list.php"   # vista por defecto (Intel)
+    - "https://www.cpubenchmark.net/cpu-list/amd"
+    - "https://www.cpubenchmark.net/cpu-list/all"
+  gpu_urls:
+    - "https://www.videocardbenchmark.net/gpu_list.php"
+  # PassMark ofrece también listados descargables en CSV/XLS para uso no comercial;
+  # revisa https://www.cpubenchmark.net/software_faq.html antes de un uso intensivo.
+  # NO usar CPU_mega_page.html / GPU_mega_page.html: esas "Mega List" llegan
+  # vacías con una petición HTTP simple (dependen de JS para rellenarse).
+
+antutu:
+  ranking_url: "https://www.antutu.com/web/ranking"   # confirmado; NO /en/ranking/rank1.htm
+  # Vista por defecto = Android / Performance / Smartphone. La página tiene
+  # pestañas para iOS, SoC, AI y Pad (tablets) cuyo comportamiento exacto
+  # (URL propia vs. estado solo-JS) no se ha podido verificar — comprobar
+  # con DevTools -> Network antes de asumir una URL para tablets.
+  # Antutu no publica ranking oficial de iOS con URL estable; para iPhone se
+  # recomienda usar Geekbench (https://browser.geekbench.com/ios-benchmarks)
+  # como fuente alternativa y documentarlo así en la web.
+  # El ranking excluye explícitamente el mercado chino (solo mercado global).
+
+# Pesos de la fórmula de móviles/tablets:
+#   value_score = (w_benchmark * antutu_norm + w_ram * ram_norm + w_storage * storage_norm) / precio
+scoring_weights:
+  phones_tablets:
+    w_benchmark: 0.6
+    w_ram: 0.2
+    w_storage: 0.2
+
+# Para PC, el value_score de cada componente es simplemente:
+#   benchmark_score / precio
+# normalizado entre 0 y 1 dentro de su propia categoría (cpu, gpu) para poder
+# combinarlos en un build completo.
+pc_build:
+  cpu_weight: 0.5
+  gpu_weight: 0.5
