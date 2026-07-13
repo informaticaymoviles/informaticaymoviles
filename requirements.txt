@@ -1,0 +1,9 @@
+flask==3.0.3
+requests==2.32.3
+beautifulsoup4==4.12.3
+lxml==5.2.2
+SQLAlchemy==2.0.31
+PyYAML==6.0.1
+pandas==2.2.2
+python-slugify==8.0.4
+tenacity==8.5.0
