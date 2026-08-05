@@ -1,29 +1,382 @@
 [
   {
-    "id": "001",
+    "id": "COMP-001",
+    "categoria": "componentes",
     "tipo": "GPU",
     "nombre": "Nvidia GTX 1060 6GB",
     "estado": "Revisado / Excelente",
-    "precio": "85 €",
+    "precio": "85,00 €",
     "unidades": 1,
     "imagen": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=600&q=80"
   },
   {
-    "id": "002",
+    "id": "COMP-002",
+    "categoria": "componentes",
     "tipo": "Móvil",
     "nombre": "Samsung Galaxy S20 FE 128GB",
     "estado": "Pantalla nueva / Sin marcas",
-    "precio": "160 €",
+    "precio": "160,00 €",
     "unidades": 2,
     "imagen": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80"
   },
   {
-    "id": "003",
+    "id": "COMP-003",
+    "categoria": "componentes",
     "tipo": "Portátil",
     "nombre": "Lenovo ThinkPad T480 i5 16GB RAM",
     "estado": "Reacondicionado Grado A",
-    "precio": "220 €",
+    "precio": "220,00 €",
     "unidades": 1,
     "imagen": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "BRO-001",
+    "categoria": "brother",
+    "tipo": "Tinta Compatible",
+    "nombre": "Brother LC900 BK / C / M / Y",
+    "estado": "Nuevo en caja",
+    "precio": "1,50 €",
+    "unidades": 13,
+    "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "BRO-002",
+    "categoria": "brother",
+    "tipo": "Tinta Compatible",
+    "nombre": "Brother LC970 / LC1000 (BK, C, M, Y)",
+    "estado": "Nuevo en caja",
+    "precio": "1,95 €",
+    "unidades": 12,
+    "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "BRO-003",
+    "categoria": "brother",
+    "tipo": "Tinta Compatible",
+    "nombre": "Brother LC980 / LC985 (BK, C, M, Y)",
+    "estado": "Nuevo en caja",
+    "precio": "1,95 €",
+    "unidades": 21,
+    "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "BRO-004",
+    "categoria": "brother",
+    "tipo": "Tinta Compatible",
+    "nombre": "Brother LC1280 (BK, C, M, Y)",
+    "estado": "Nuevo en caja",
+    "precio": "1,99 €",
+    "unidades": 7,
+    "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "BRO-005",
+    "categoria": "brother",
+    "tipo": "Tinta Compatible",
+    "nombre": "Brother LC121 / LC123 (BK, C, M, Y)",
+    "estado": "Nuevo en caja",
+    "precio": "1,99 €",
+    "unidades": 18,
+    "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "BRO-006",
+    "categoria": "brother",
+    "tipo": "Tinta Compatible",
+    "nombre": "Brother LC223 (BK, M, Y)",
+    "estado": "Nuevo en caja",
+    "precio": "2,95 €",
+    "unidades": 12,
+    "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "BRO-007",
+    "categoria": "brother",
+    "tipo": "Tinta Compatible",
+    "nombre": "Brother LC3211 / LC3213 BK",
+    "estado": "Nuevo en caja",
+    "precio": "4,95 €",
+    "unidades": 6,
+    "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "BRO-008",
+    "categoria": "brother",
+    "tipo": "Tinta Compatible",
+    "nombre": "Brother LC3211 / LC3213 (C, M, Y)",
+    "estado": "Nuevo en caja",
+    "precio": "3,95 €",
+    "unidades": 13,
+    "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "BRO-009",
+    "categoria": "brother",
+    "tipo": "Tinta Compatible",
+    "nombre": "Brother LC3219 BK",
+    "estado": "Nuevo en caja",
+    "precio": "4,50 €",
+    "unidades": 3,
+    "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "BRO-010",
+    "categoria": "brother",
+    "tipo": "Tinta Compatible",
+    "nombre": "Brother LC3219 (M, Y)",
+    "estado": "Nuevo en caja",
+    "precio": "3,95 €",
+    "unidades": 3,
+    "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "BRO-011",
+    "categoria": "brother",
+    "tipo": "Tinta Compatible",
+    "nombre": "Brother LC422 (BK, C, M, Y)",
+    "estado": "Nuevo en caja",
+    "precio": "7,95 €",
+    "unidades": 4,
+    "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "BRO-012",
+    "categoria": "brother",
+    "tipo": "Tinta Original",
+    "nombre": "Brother LC426 Original (BK, C, M, Y)",
+    "estado": "Nuevo / Original",
+    "precio": "22,00 €",
+    "unidades": 4,
+    "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "BRO-013",
+    "categoria": "brother",
+    "tipo": "Cinta Adhesiva",
+    "nombre": "Cinta Adhesiva Brother DK22205 Compatible",
+    "estado": "Nuevo",
+    "precio": "6,95 €",
+    "unidades": 2,
+    "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "BRO-014",
+    "categoria": "brother",
+    "tipo": "Cinta Adhesiva",
+    "nombre": "Cinta Adhesiva Brother DK22205 Original",
+    "estado": "Nuevo / Original",
+    "precio": "19,50 €",
+    "unidades": 5,
+    "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "BRO-015",
+    "categoria": "brother",
+    "tipo": "Tóner / Tambor",
+    "nombre": "Tóner TN241 / TN243 / TN320 / TN421 / TN1050 Compatible",
+    "estado": "Nuevo en caja",
+    "precio": "14,95 €",
+    "unidades": 19,
+    "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "BRO-016",
+    "categoria": "brother",
+    "tipo": "Tambor Compatible",
+    "nombre": "Tambor Brother DR241 / DR1050 / DR2000 / DR2200 / DR3400",
+    "estado": "Nuevo en caja",
+    "precio": "14,95 €",
+    "unidades": 12,
+    "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "HP-001",
+    "categoria": "hp",
+    "tipo": "Tinta Original",
+    "nombre": "HP 11 / 14 / 19 (BK / C)",
+    "estado": "Nuevo / Original",
+    "precio": "2,99 €",
+    "unidades": 5,
+    "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "HP-002",
+    "categoria": "hp",
+    "tipo": "Tinta Compatible",
+    "nombre": "HP 21 / 28 / 56 Compatible",
+    "estado": "Nuevo en caja",
+    "precio": "9,95 €",
+    "unidades": 5,
+    "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "HP-003",
+    "categoria": "hp",
+    "tipo": "Tinta Original",
+    "nombre": "HP 22 / 23 / 29 Color/BK Original",
+    "estado": "Nuevo / Original",
+    "precio": "15,00 €",
+    "unidades": 5,
+    "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "HP-004",
+    "categoria": "hp",
+    "tipo": "Tinta Original",
+    "nombre": "HP 301 XL Negro",
+    "estado": "Nuevo / Original",
+    "precio": "35,00 €",
+    "unidades": 1,
+    "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "HP-005",
+    "categoria": "hp",
+    "tipo": "Tinta Original",
+    "nombre": "HP 304 XL / 305 / 303 (Varias opciones)",
+    "estado": "Nuevo / Original",
+    "precio": "15,00 €",
+    "unidades": 6,
+    "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "HP-006",
+    "categoria": "hp",
+    "tipo": "Tinta Compatible",
+    "nombre": "HP 88 Compatible Multipack",
+    "estado": "Nuevo en caja",
+    "precio": "4,95 €",
+    "unidades": 8,
+    "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "HP-007",
+    "categoria": "hp",
+    "tipo": "Tóner Compatible",
+    "nombre": "Tóner HP CF283X / CE285A / Q2612A Compatible",
+    "estado": "Nuevo en caja",
+    "precio": "8,95 €",
+    "unidades": 7,
+    "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "EPS-001",
+    "categoria": "epson",
+    "tipo": "Tinta Compatible",
+    "nombre": "Epson Serie T026 / T027 / T028 / T036 / T040 / T050",
+    "estado": "Nuevo en caja",
+    "precio": "1,95 €",
+    "unidades": 12,
+    "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "EPS-002",
+    "categoria": "epson",
+    "tipo": "Tinta Compatible",
+    "nombre": "Epson T0481 - T0486 (BK, C, M, Y, LC, LM)",
+    "estado": "Nuevo en caja",
+    "precio": "1,50 €",
+    "unidades": 12,
+    "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "EPS-003",
+    "categoria": "epson",
+    "tipo": "Tinta Compatible",
+    "nombre": "Epson T0551 - T0554 (BK, C, M, Y)",
+    "estado": "Nuevo en caja",
+    "precio": "1,95 €",
+    "unidades": 8,
+    "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "EPS-004",
+    "categoria": "epson",
+    "tipo": "Tinta Compatible",
+    "nombre": "Epson T1281 - T1284 / T1811 - T1814",
+    "estado": "Nuevo en caja",
+    "precio": "1,99 €",
+    "unidades": 19,
+    "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "EPS-005",
+    "categoria": "epson",
+    "tipo": "Tinta Original",
+    "nombre": "Epson T1631 / T1632 / T1633 / T1634 Original",
+    "estado": "Nuevo / Original",
+    "precio": "10,25 €",
+    "unidades": 4,
+    "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "CAN-001",
+    "categoria": "canon",
+    "tipo": "Tinta Compatible",
+    "nombre": "Canon BC02 / C-00003E / CB-24 Compatible",
+    "estado": "Nuevo en caja",
+    "precio": "3,00 €",
+    "unidades": 4,
+    "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "CAN-002",
+    "categoria": "canon",
+    "tipo": "Tinta Original",
+    "nombre": "Canon PG-510 / CL-511 Originales",
+    "estado": "Nuevo / Original",
+    "precio": "19,00 €",
+    "unidades": 4,
+    "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "CAN-003",
+    "categoria": "canon",
+    "tipo": "Tinta Original",
+    "nombre": "Canon PG-540 / CL-541 / PG-545 / CL-546 Originales",
+    "estado": "Nuevo / Original",
+    "precio": "22,00 €",
+    "unidades": 4,
+    "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "VAR-001",
+    "categoria": "varias",
+    "tipo": "Tóner / Tinta",
+    "nombre": "Tóner Ricoh C305H / C305 Y",
+    "estado": "Nuevo",
+    "precio": "19,00 €",
+    "unidades": 3,
+    "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "VAR-002",
+    "categoria": "varias",
+    "tipo": "Tóner Compatible",
+    "nombre": "Tóner Kyocera TK1140 Compatible",
+    "estado": "Nuevo en caja",
+    "precio": "24,00 €",
+    "unidades": 2,
+    "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "VAR-003",
+    "categoria": "varias",
+    "tipo": "Tóner Compatible",
+    "nombre": "Tóner OKI C3000 / C5000 (BK, C, M, Y)",
+    "estado": "Nuevo en caja",
+    "precio": "9,00 €",
+    "unidades": 5,
+    "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "VAR-004",
+    "categoria": "varias",
+    "tipo": "Tóner Compatible",
+    "nombre": "Tóner Samsung CLP320 / D104S / D101S Compatible",
+    "estado": "Nuevo en caja",
+    "precio": "12,00 €",
+    "unidades": 12,
+    "imagen": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=600&q=80"
   }
 ]
