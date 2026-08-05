@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Ocasión | Informática y Móviles .com</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --border-color: #30363d;
+            --primary-cyan: #00d2eb;
+            --text-main: #f0f6fc;
+            --text-muted: #8b949e;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding-bottom: 50px; }
+
+        header {
+            text-align: center;
+            padding: 35px 20px;
+            border-bottom: 1px solid var(--border-color);
+            background: linear-gradient(180deg, rgba(0,210,235,0.08) 0%, rgba(13,17,23,1) 100%);
+        }
+
+        header h1 { font-size: 2.2rem; color: #fff; }
+        header h1 span { color: var(--primary-cyan); }
+        .back-link { display: inline-block; margin-top: 12px; color: var(--primary-cyan); text-decoration: none; font-weight: bold; }
+        .back-link:hover { text-decoration: underline; }
+
+        .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+
+        .grid-products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .product-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary-cyan);
+            box-shadow: 0 5px 15px rgba(0, 210, 235, 0.25);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #000;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .product-info { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        .badge-type { background: rgba(0, 210, 235, 0.15); color: var(--primary-cyan); font-size: 0.75rem; padding: 4px 8px; border-radius: 4px; font-weight: bold; text-transform: uppercase; display: inline-block; margin-bottom: 10px; }
+        .product-title { font-size: 1.15rem; margin-bottom: 8px; color: #fff; }
+        .product-details { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px; }
+        .product-price { font-size: 1.5rem; font-weight: bold; color: var(--primary-cyan); margin-bottom: 15px; }
+
+        .btn-buy {
+            display: block;
+            text-align: center;
+            background-color: var(--primary-cyan);
+            color: #000;
+            padding: 10px;
+            font-weight: bold;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+
+        .btn-buy:hover { background-color: #00b3c7; }
+        
+        .loading-text { text-align: center; color: var(--text-muted); font-size: 1.1rem; padding: 40px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Catálogo de <span>Ocasión</span></h1>
+    <p>Componentes y dispositivos revisados y testeados con garantía</p>
+    <a href="index.html" class="back-link">← Volver a la web principal</a>
+</header>
+
+<div class="container">
+    <div id="catalogo" class="grid-products">
+        <p class="loading-text">Cargando productos del catálogo...</p>
+    </div>
+</div>
+
+<script>
+    fetch('articulos.json')
+        .then(response => response.json())
+        .then(productos => {
+            const contenedor = document.getElementById('catalogo');
+            contenedor.innerHTML = ''; // Limpiar mensaje de carga
+
+            if(productos.length === 0) {
+                contenedor.innerHTML = '<p class="loading-text">No hay artículos disponibles en este momento.</p>';
+                return;
+            }
+
+            productos.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                card.innerHTML = `
+                    <img src="${item.imagen}" alt="${item.nombre}" class="product-img">
+                    <div class="product-info">
+                        <div>
+                            <span class="badge-type">${item.tipo} | Ref: #${item.id}</span>
+                            <h3 class="product-title">${item.nombre}</h3>
+                            <p class="product-details"><strong>Estado:</strong> ${item.estado}</p>
+                            <p class="product-details"><strong>Unidades:</strong> ${item.unidades} ud.</p>
+                        </div>
+                        <div>
+                            <div class="product-price">${item.precio}</div>
+                            <a href="https://t.me/+34634447145" target="_blank" class="btn-buy">Comprar por Telegram</a>
+                        </div>
+                    </div>
+                `;
+                contenedor.appendChild(card);
+            });
+        })
+        .catch(err => {
+            console.error('Error cargando el catálogo:', err);
+            document.getElementById('catalogo').innerHTML = '<p class="loading-text">Error al cargar los artículos. Comprueba el archivo articulos.json.</p>';
+        });
+</script>
+
+</body>
+</html>
