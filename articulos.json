@@ -1,0 +1,29 @@
+[
+  {
+    "id": "001",
+    "tipo": "GPU",
+    "nombre": "Nvidia GTX 1060 6GB",
+    "estado": "Revisado / Excelente",
+    "precio": "85 €",
+    "unidades": 1,
+    "imagen": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "002",
+    "tipo": "Móvil",
+    "nombre": "Samsung Galaxy S20 FE 128GB",
+    "estado": "Pantalla nueva / Sin marcas",
+    "precio": "160 €",
+    "unidades": 2,
+    "imagen": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "003",
+    "tipo": "Portátil",
+    "nombre": "Lenovo ThinkPad T480 i5 16GB RAM",
+    "estado": "Reacondicionado Grado A",
+    "precio": "220 €",
+    "unidades": 1,
+    "imagen": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=600&q=80"
+  }
+]
