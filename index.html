@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informática y Móviles .com | SAT y Software</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --border-color: #30363d;
+            --primary-cyan: #00d2eb;
+            --text-main: #f0f6fc;
+            --text-muted: #8b949e;
+            --open-source-tag: #238636;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 40px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 1px solid var(--border-color);
+            background: linear-gradient(180deg, rgba(0,210,235,0.05) 0%, rgba(13,17,23,1) 100%);
+        }
+
+        header h1 {
+            color: #fff;
+            font-size: 2.5rem;
+        }
+
+        header h1 span {
+            color: var(--primary-cyan);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        /* Nav Buttons Grid */
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .nav-btn {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-btn:hover {
+            border-color: var(--primary-cyan);
+            box-shadow: 0 0 10px rgba(0, 210, 235, 0.3);
+            color: var(--primary-cyan);
+        }
+
+        /* Section Cards */
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        .card h2 {
+            color: var(--primary-cyan);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+        }
+
+        /* Link list & badges */
+        .app-category {
+            margin-bottom: 20px;
+        }
+
+        .app-category h3 {
+            color: #fff;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .app-list {
+            list-style: none;
+        }
+
+        .app-item {
+            background: rgba(255,255,255,0.02);
+            margin-bottom: 8px;
+            padding: 10px 15px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .app-item a {
+            color: var(--primary-cyan);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .app-item a:hover {
+            text-decoration: underline;
+        }
+
+        .badge {
+            font-size: 0.75rem;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .badge-os { background-color: var(--open-source-tag); color: #fff; }
+        .badge-sys { background-color: #388bfd; color: #fff; }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            color: var(--primary-cyan);
+        }
+
+        /* Custom Order Box */
+        .repair-box {
+            background: rgba(0, 210, 235, 0.05);
+            border: 1px solid var(--primary-cyan);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .repair-box ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .btn-action {
+            display: inline-block;
+            background-color: var(--primary-cyan);
+            color: #000;
+            padding: 12px 24px;
+            font-weight: bold;
+            border-radius: 6px;
+            text-decoration: none;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+
+        .btn-action:hover {
+            background-color: #00b3c7;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <!-- Sustituir la ruta por la imagen de tu logo subida a GitHub -->
+    <h1>Informática y <span>Móviles</span>.com</h1>
+    <p>SAT, Reparación de Electrónica y Catálogo de Software Recomendado</p>
+</header>
+
+<div class="container">
+
+    <!-- Accesos Rápidos -->
+    <div class="nav-grid">
+        <a href="#derecho-reparar" class="nav-btn">1. Derecho a Reparar</a>
+        <a href="#apps-utiles" class="nav-btn">2. Apps y Software</a>
+        <a href="#comparadores" class="nav-btn">3. Comparadores</a>
+        <a href="#instagram" class="nav-btn">4. Nuestras Reparaciones</a>
+        <a href="#ordenar-reparacion" class="nav-btn">5. Solicitud de Reparación</a>
+        <a href="#contacto" class="nav-btn">6. Horario y Ubicación</a>
+        <a href="#ocasion" class="nav-btn">7. Artículos de Ocasión</a>
+        <a href="#bch" class="nav-btn">8. Bitcoin Cash (BCH)</a>
+    </div>
+
+    <!-- 1. Derecho a Reparar -->
+    <div class="card" id="derecho-reparar">
+        <h2>1. Derecho a Reparar</h2>
+        <p>Apoyamos activamente las normativas europeas para garantizar reparaciones más fáciles, sostenibles y asequibles para los consumidores.</p>
+        <br>
+        <a href="https://www.europarl.europa.eu/news/es/press-room/20240419IPR20590/derecho-a-reparar-reparaciones-mas-faciles-y-atractivas-para-los-consumidores" target="_blank" class="btn-action">Leer Directiva del Parlamento Europeo</a>
+    </div>
+
+    <!-- 2. Apps y Utilidades -->
+    <div class="card" id="apps-utiles">
+        <h2>2. Apps, Utilidades, Testeadores, Antivirus y Linux</h2>
+        <p style="margin-bottom: 15px;">Selección del software más recomendable utilizado en nuestro taller. Las herramientas de código abierto están marcadas distintivamente.</p>
+        
+        <div class="app-category">
+            <h3>Navegadores y Comunicación</h3>
+            <ul class="app-list">
+                <li class="app-item">
+                    <span><a href="https://www.firefox.com/es-ES/" target="_blank">Firefox Browser</a> - Navegación libre</span>
+                    <div><span class="badge badge-os">Open Source</span> <span class="badge badge-sys">Todos</span></div>
+                </li>
+                <li class="app-item">
+                    <span><a href="https://www.torproject.org/es/download/" target="_blank">Tor Browser</a> - Privacidad y anonimato</span>
+                    <div><span class="badge badge-os">Open Source</span> <span class="badge badge-sys">Todos</span></div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="app-category">
+            <h3>Ofimática y Archivos</h3>
+            <ul class="app-list">
+                <li class="app-item">
+                    <span><a href="https://es.libreoffice.org/" target="_blank">LibreOffice</a> - Suite ofimática completa</span>
+                    <div><span class="badge badge-os">Open Source</span> <span class="badge badge-sys">Linux / Mac / Win</span></div>
+                </li>
+                <li class="app-item">
+                    <span><a href="https://pdfsam.org/es/download-pdfsam-basic/" target="_blank">PDFsam Basic</a> - Editor/divisor PDF</span>
+                    <div><span class="badge badge-os">Open Source</span> <span class="badge badge-sys">Linux / Mac / Win</span></div>
+                </li>
+                <li class="app-item">
+                    <span><a href="https://www.7-zip.org/download.html" target="_blank">7-Zip</a> - Compresor / Descompresor de archivos</span>
+                    <div><span class="badge badge-os">Open Source</span> <span class="badge badge-sys">Linux / Mac / Win</span></div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="app-category">
+            <h3>Herramientas Técnicas y Mantenimiento</h3>
+            <ul class="app-list">
+                <li class="app-item">
+                    <span><a href="https://rufus.ie/es/" target="_blank">Rufus</a> - Creador de USBs arrancables</span>
+                    <div><span class="badge badge-os">Open Source</span> <span class="badge badge-sys">Windows</span></div>
+                </li>
+                <li class="app-item">
+                    <span><a href="https://www.ventoy.net/en/download.html" target="_blank">Ventoy</a> - Multiboot para ISOs</span>
+                    <div><span class="badge badge-os">Open Source</span> <span class="badge badge-sys">Autoarrancable</span></div>
+                </li>
+                <li class="app-item">
+                    <span><a href="https://dortania.github.io/OpenCore-Legacy-Patcher/" target="_blank">OpenCore Legacy Patcher</a> - Actualiza Macs antiguos</span>
+                    <div><span class="badge badge-os">Open Source</span> <span class="badge badge-sys">Mac</span></div>
+                </li>
+                <li class="app-item">
+                    <span><a href="https://www.cgsecurity.org/wiki/TestDisk_Descargar" target="_blank">TestDisk</a> - Recuperación de datos</span>
+                    <div><span class="badge badge-os">Open Source</span> <span class="badge badge-sys">Todos</span></div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="app-category">
+            <h3>Distribuciones GNU/Linux Recomendadas</h3>
+            <ul class="app-list">
+                <li class="app-item"><span><a href="https://linuxmint.com/download.php" target="_blank">Linux Mint Cinnamon</a> - Uso diario fácil y pulido</span> <span class="badge badge-os">Open Source</span></li>
+                <li class="app-item"><span><a href="https://www.debian.org/index.es.html" target="_blank">Debian</a> - Estabilidad absoluta</span> <span class="badge badge-os">Open Source</span></li>
+                <li class="app-item"><span><a href="https://ubuntu.com/download/desktop" target="_blank">Ubuntu</a> - La más extendida</span> <span class="badge badge-os">Open Source</span></li>
+                <li class="app-item"><span><a href="https://www.deepin.org/en/download/" target="_blank">Deepin</a> - Estética avanzada</span> <span class="badge badge-os">Open Source</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 3. Comparadores -->
+    <div class="card" id="comparadores">
+        <h2>3. Comparador Online de Hardware</h2>
+        <p>Herramientas externas para comparar características y rendimiento antes de comprar:</p>
+        <ul style="margin: 15px 0 0 20px;">
+            <li><a href="https://www.kimovil.com/es/comparar-moviles" target="_blank" style="color:var(--primary-cyan)">Comparar Smartphones en Kimovil</a></li>
+            <li><a href="https://www.cpubenchmark.net/cpu-list/" target="_blank" style="color:var(--primary-cyan)">Rendimiento de Procesadores (CPU Benchmark)</a></li>
+            <li><a href="https://versus.com/es/graphics-card" target="_blank" style="color:var(--primary-cyan)">Comparar Tarjetas Gráficas (Versus)</a></li>
+            <li><a href="https://versus.com/es/cpu" target="_blank" style="color:var(--primary-cyan)">Comparar CPUs (Versus)</a></li>
+        </ul>
+    </div>
+
+    <!-- 4. Instagram -->
+    <div class="card" id="instagram">
+        <h2>4. Nuestras Reparaciones</h2>
+        <p>Consulta en nuestro perfil oficial los trabajos de microelectrónica y reparación diarios:</p>
+        <br>
+        <a href="https://www.instagram.com/informaticaymoviles?igsh=MXFyZmNvcjlyb2x1bw==" target="_blank" class="btn-action">Ver Galería en Instagram</a>
+    </div>
+
+    <!-- 5. Ordenar Reparación -->
+    <div class="card" id="ordenar-reparacion">
+        <h2>5. Solicitar Reparación (Envío por Transporte)</h2>
+        <div class="repair-box">
+            <p><strong>Guía para la recogida de ordenadores, móviles, portátiles o electrónica:</strong></p>
+            <p>Envíanos un mensaje a nuestro <strong>Telegram de la tienda (654.95.96.07)</strong> adjuntando la siguiente información:</p>
+            <ul>
+                <li>Vídeo explicando detenidamente la avería.</li>
+                <li>Fotografías detalladas (delantera y trasera) del estado físico del equipo.</li>
+                <li>Número de serie (SN) o IMEI.</li>
+                <li>Indicación de si el equipo enciende y/o carga.</li>
+                <li>Accesorios y cargadores incluidos dentro del paquete.</li>
+                <li>Dirección completa de recogida.</li>
+            </ul>
+            <p style="margin-top: 10px; color: #e3b341;">⚠️ <em>Nota importante: Embala el dispositivo acolchándolo adecuadamente para evitar daños en el traslado.</em></p>
+            <p style="margin-top: 10px;">Una vez validados los datos, coordinaremos la recogida a través de la empresa de transportes <strong>Aguitran</strong>.</p>
+            <a href="https://t.me/+34654959607" target="_blank" class="btn-action">Abrir Telegram del SAT</a>
+        </div>
+    </div>
+
+    <!-- 6. Horario y Ubicación -->
+    <div class="card" id="contacto">
+        <h2>6. Horario y Ubicación</h2>
+        <p><strong>Horario de atención:</strong> Lunes a Viernes de 10:00h a 15:00h</p>
+        <p><strong>Dirección:</strong> C. Pline, 14, Loja, Granada</p>
+        <p><strong>Email:</strong> informaticaymoviles.sat@gmail.com</p>
+        <br>
+        <iframe src="https://maps.google.com/maps?q=C.%20Pline,%2014,%20Loja,%20Granada&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="250" style="border:0; border-radius: 6px;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <!-- 7. Artículos de Ocasión -->
+    <div class="card" id="ocasion">
+        <h2>7. Artículos y Componentes de Ocasión</h2>
+        <p>Catálogo de componentes, accesorios y dispositivos reacondicionados con garantía:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ref.</th>
+                    <th>Tipo</th>
+                    <th>Nombre</th>
+                    <th>Estado</th>
+                    <th>Precio</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#001</td>
+                    <td>GPU</td>
+                    <td>Nvidia GTX 1060 6GB</td>
+                    <td>Revisado / Excelente</td>
+                    <td>85 €</td>
+                    <td><a href="https://t.me/+34654959607" target="_blank" style="color:var(--primary-cyan)">Comprar</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 8. Bitcoin Cash -->
+    <div class="card" id="bch">
+        <h2>8. Bitcoin Cash (BCH)</h2>
+        <p>Aceptamos y fomentamos el uso de Bitcoin Cash para tus transacciones.</p>
+        <p style="margin-top: 10px;"><strong>Compramos tus BCH:</strong> Para que puedas realizar tus compras o pagos en efectivo en nuestro establecimiento, te compramos tus BCH (limitado a 100€ por operación).</p>
+        <br>
+        <a href="https://www.bitcoincash.org/" target="_blank" class="btn-action">Saber más de Bitcoin Cash</a>
+    </div>
+
+</div>
+
+<footer>
+    <div class="container" style="padding:0;">
+        <p><strong>Pliego de descargo de responsabilidad y protección de datos:</strong></p>
+        <p>Informática y Móviles .com cumple con la normativa de protección de datos (RGPD). La información proporcionada en este sitio web y en los servicios del SAT se gestionará confidencialmente. Los enlaces externos a software y comparadores se ofrecen con fines informativos y el usuario los descarga bajo su propia responsabilidad.</p>
+    </div>
+</footer>
+
+</body>
+                            </html>
+                            
