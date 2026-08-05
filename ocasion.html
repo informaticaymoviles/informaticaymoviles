@@ -31,7 +31,6 @@
 
         .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
 
-        /* Controles de Filtros y Buscador */
         .controls-wrapper {
             margin-bottom: 30px;
             display: flex;
@@ -78,7 +77,6 @@
             border-color: var(--primary-cyan);
         }
 
-        /* Cuadrícula de Productos */
         .grid-products {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -135,7 +133,7 @@
 
 <header>
     <h1>Catálogo de <span>Ocasión</span></h1>
-    <p>Componentes, dispositivos y consumibles en stock con garantía</p>
+    <p>Consolas, discos, memorias, componentes y consumibles revisados</p>
     <a href="index.html" class="back-link">← Volver a la web principal</a>
 </header>
 
@@ -143,21 +141,20 @@
     
     <!-- Filtros de Categorías y Buscador -->
     <div class="controls-wrapper">
-        <input type="text" id="searchInput" class="search-box" placeholder="🔍 Buscar por modelo, producto o referencia...">
+        <input type="text" id="searchInput" class="search-box" placeholder="🔍 Buscar consola, disco, RAM, modelo o referencia...">
         <div class="filter-buttons">
             <button class="btn-filter active" onclick="filtrarCategoria('todos', this)">Todos</button>
-            <button class="btn-filter" onclick="filtrarCategoria('componentes', this)">Componentes / PC</button>
-            <button class="btn-filter" onclick="filtrarCategoria('brother', this)">Brother</button>
-            <button class="btn-filter" onclick="filtrarCategoria('hp', this)">HP</button>
-            <button class="btn-filter" onclick="filtrarCategoria('epson', this)">Epson</button>
-            <button class="btn-filter" onclick="filtrarCategoria('canon', this)">Canon</button>
-            <button class="btn-filter" onclick="filtrarCategoria('varias', this)">Otras Marcas</button>
+            <button class="btn-filter" onclick="filtrarCategoria('consolas', this)">Consolas</button>
+            <button class="btn-filter" onclick="filtrarCategoria('discos', this)">Discos / SSD</button>
+            <button class="btn-filter" onclick="filtrarCategoria('ram', this)">Memorias RAM</button>
+            <button class="btn-filter" onclick="filtrarCategoria('tintas', this)">Tintas / Tóner</button>
+            <button class="btn-filter" onclick="filtrarCategoria('componentes', this)">Componentes PC / Móviles</button>
         </div>
     </div>
 
     <!-- Contenedor del Catálogo -->
     <div id="catalogo" class="grid-products">
-        <p class="loading-text">Cargando inventario real...</p>
+        <p class="loading-text">Cargando inventario de ocasión...</p>
     </div>
 </div>
 
@@ -173,7 +170,7 @@
         })
         .catch(err => {
             console.error('Error cargando inventario:', err);
-            document.getElementById('catalogo').innerHTML = '<p class="loading-text">Error al cargar el inventario real. Revisa el archivo articulos.json.</p>';
+            document.getElementById('catalogo').innerHTML = '<p class="loading-text">Error al cargar los artículos. Revisa el archivo articulos.json.</p>';
         });
 
     function renderizarProductos(productos) {
@@ -181,7 +178,7 @@
         contenedor.innerHTML = '';
 
         if(productos.length === 0) {
-            contenedor.innerHTML = '<p class="loading-text">No se encontraron productos que coincidan con el filtro.</p>';
+            contenedor.innerHTML = '<p class="loading-text">No hay artículos disponibles en esta categoría.</p>';
             return;
         }
 
@@ -209,11 +206,8 @@
 
     function filtrarCategoria(cat, elemento) {
         categoriaActual = cat;
-        
-        // Actualizar estados visuales de los botones
         document.querySelectorAll('.btn-filter').forEach(btn => btn.classList.remove('active'));
         elemento.classList.add('active');
-
         aplicarFiltros();
     }
 
@@ -236,5 +230,4 @@
 </script>
 
 </body>
-                                                                        </html>
-    
+</html>
